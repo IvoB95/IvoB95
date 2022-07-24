@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TEST</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<div id="nav-container">
+		<div id="button-container">
+			<button id="openCloseButton" onclick="openCloseMenu()">
+				<svg width="100%" height="100%">
+					<rect x="0" y="20%" width="100%" height="10%" />
+					<rect x="0" y="45%" width="100%" height="10%" /> 
+					<rect x="0" y="70%" width="100%" height="10%" />
+				</svg>
+			</button>
+		</div>
+		<nav>
+			<ul>
+				<li><a onclick="onSectionButtonClick()" href="#section1">section1</a></li>
+				<li><a onclick="onSectionButtonClick()" href="#section2">section2</a></li>
+				<li><a onclick="onSectionButtonClick()" href="#section3">section3</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div id="contents">
+		<div id="section1" class="content-outer" style="background-color: red;">
+			<section>
+				<h1>section1</h1>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</section>
+		</div>
+		<div id="section2" class="content-outer" style="background-color: green;">
+			<section>
+				<h1>section2</h1>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</section>
+		</div>
+		<div id="section3" class="content-outer" style="background-color: blue;">
+			<section>
+				<h1>section3</h1>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</section>
+		</div>
+	</div>
+</body>
+</html>
