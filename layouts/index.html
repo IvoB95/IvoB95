@@ -1,0 +1,59 @@
+{{ define "main" }}
+<div id="nav-container">
+    <div id="button-container">
+        <button id="openCloseButton" onclick="openCloseMenu()">
+            <svg width="100%" height="100%">
+                <rect x="0" y="20%" width="100%" height="10%" />
+                <rect x="0" y="45%" width="100%" height="10%" /> 
+                <rect x="0" y="70%" width="100%" height="10%" />
+            </svg>
+        </button>
+    </div>
+    <nav>
+        <ul>
+            {{ range .Pages }} 
+            <li><a onclick="onSectionButtonClick()" href="#{{ .Params.id }}">{{ .Title }}</a></li>
+            {{ end }}
+            {{ range $.Site.Data.skills }}
+            <li><a onclick="onSectionButtonClick()" href="#{{ .id }}">{{ .title }}</a></li>
+            {{end}}
+        </ul>
+    </nav>
+    </div>
+    <div id="contents">
+        {{ range .Pages }} 
+        <div id="{{ .Params.id }}" class="content-outer" style="background-color: red;">
+            <section>
+                <h1>{{ .Title }}</h1>
+                <p>
+                {{ .Content }}    
+                </p>
+            </section>
+        </div>
+        {{ end }}
+        {{ range $.Site.Data.skills }}
+        <div id="{{ .id }}" class="content-outer" style="background-color: blue;">
+            <section>
+            {{ partial "skills.html" . }}
+            </section>
+        </div>
+        {{ end }}
+    </div>
+</div>
+<!--
+    <main>
+        <ol style="position: fixed; top: 0px; left: 0px">
+            {{ range .Pages }} 
+            <li><a href="#{{ .Params.id }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ol>
+        {{ range .Pages }}
+        <section id="{{ .Params.id }}">
+            <h1>{{ .Title }}</h1>
+            <p>{{ .Content }}</p>
+        </section>
+        {{ end }}
+    </main>
+
+-->
+{{ end }}

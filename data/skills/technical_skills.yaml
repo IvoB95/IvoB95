@@ -1,0 +1,21 @@
+title: Technical Skills
+id: technical-skills
+skills:
+  - skill: C#
+    level: 5
+  - skill: Java
+    level: 4
+  - skill: JavaScript
+    level: 3
+  - skill: Haskellbla
+    level: 3
+  - skill: Python
+    level: 4
+  - skill: SQL
+    level: 4
+  - skill: C++
+    level: 1
+  - skill: Latex
+    level: 4
+  - skill: Technical documentation
+    level: 4
