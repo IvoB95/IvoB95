@@ -10,12 +10,12 @@
         </button>
     </div>
     <nav>
-        <ul>
+        <ul id="navigation_list">
             {{ range .Pages }} 
-            <li><a onclick="onSectionButtonClick()" href="#{{ .Params.id }}">{{ .Title }}</a></li>
+            <li><a onclick="onSectionButtonClick()" href="#{{ .Params.id }}" data-panel-id="{{ .Params.id }}">{{ .Title }}</a></li>
             {{ end }}
             {{ range $.Site.Data.skills }}
-            <li><a onclick="onSectionButtonClick()" href="#{{ .id }}">{{ .title }}</a></li>
+            <li><a onclick="onSectionButtonClick()" href="#{{ .id }}" data-panel-id="{{ .id }}">{{ .title }}</a></li>
             {{end}}
         </ul>
     </nav>

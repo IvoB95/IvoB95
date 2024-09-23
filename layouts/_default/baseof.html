@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script type="text/javascript" src="script.js"></script>
   </head>
-  <body>
+  <body onscroll="activateCorrectSideBarButton()" onload="activateCorrectSideBarButton()">
     <!-- Code that all your templates share, like a header -->
     {{ block "main" . }}
       <!-- The part of the page that begins to differ between templates -->
