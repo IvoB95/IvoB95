@@ -14,15 +14,13 @@
             {{ range .Pages }} 
             <li><a onclick="onSectionButtonClick()" href="#{{ .Params.id }}" data-panel-id="{{ .Params.id }}">{{ .Title }}</a></li>
             {{ end }}
-            {{ range $.Site.Data.skills }}
-            <li><a onclick="onSectionButtonClick()" href="#{{ .id }}" data-panel-id="{{ .id }}">{{ .title }}</a></li>
-            {{end}}
+            <li><a onclick="onSectionButtonClick()" href="#skills-panel" data-panel-id="skills-panel">Skills</a></li>
         </ul>
     </nav>
     </div>
     <div id="contents">
         {{ range .Pages }} 
-        <div id="{{ .Params.id }}" class="content-outer" style="background-color: red;">
+        <div id="{{ .Params.id }}" class="content-outer">
             <section>
                 <h1>{{ .Title }}</h1>
                 <p>
@@ -31,13 +29,16 @@
             </section>
         </div>
         {{ end }}
-        {{ range $.Site.Data.skills }}
-        <div id="{{ .id }}" class="content-outer" style="background-color: blue;">
+        <div id="skills-panel" class="content-outer">
             <section>
-            {{ partial "skills.html" . }}
+            <h1>Skills</h1>
+            <div class="skills-container">
+                {{ range $.Site.Data.skills }}
+                    {{ partial "skills.html" . }}
+                {{ end }}
+            </div>
             </section>
         </div>
-        {{ end }}
     </div>
 </div>
 {{ end }}

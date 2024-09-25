@@ -1,9 +1,11 @@
-<h1>{{ .title }}</h1>
-<table>
-    {{ range .skills }}
-    <tr>
-        <td>{{ .skill }}</td>
-        <td>{{ .level }}</td>
-    </tr>
-    {{ end }}
-</table>
+<div class="skills-section">
+    <h2>{{ .title }}</h2>
+    <table>
+        {{ range .skills }}
+        <tr>
+            <td>{{ .skill }}</td>
+            <td>{{ .level }}/5</td>
+        </tr>
+        {{ end }}
+    </table>
+</div>

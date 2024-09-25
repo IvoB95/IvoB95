@@ -84,6 +84,12 @@ nav li a.active {
     #button-container {
         display: none;
     }
+
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2em;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -102,7 +108,7 @@ nav li a.active {
         height: 2.5em;
         padding: 5px;
         z-index: 2;
-        background-color: lightgreen;
+        background-color: lime;
     }
 
     #contents {
@@ -148,5 +154,9 @@ nav li a.active {
 
     #openCloseButton rect {
         fill: purple;
+    }
+
+    .content-outer section {
+        margin: 0.5em;
     }
 }
