@@ -38,6 +38,8 @@
     --navbar: var(--accent-color2);
     --navbar-button1: var(--bg-color2);
     --navbar-button2: var(--accent-color2);
+    --prog-bar-fill: var(--accent-color2);
+    --prog-bar-empty: var(--bg-color);
 }
 
 html {
@@ -78,6 +80,15 @@ nav li a:hover {
 nav li a.active {
     background-color: var(--active-button) !important;
     color: var(--active-button-text) !important;
+}
+
+.prog-bar-fill {
+    fill: var(--prog-bar-fill);
+}
+
+
+.prog-bar-empty {
+    fill: var(--bg-color);
 }
 
 .content-outer {

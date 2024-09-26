@@ -4,7 +4,14 @@
         {{ range .skills }}
         <tr>
             <td>{{ .skill }}</td>
-            <td>{{ .level }}/5</td>
+        </tr>
+        <tr>
+            <td>
+                <svg width="9em" height="1em">
+                    <rect class="prog-bar-fill" x="0" y="0" width="{{ math.Mul (math.Div .level 5.0) 100 }}" height="100%" />
+                    <rect class="prog-bar-empty" x="{{ math.Mul (math.Div .level 5.0) 100 }}" y="0" width="{{ math.Mul (math.Div (sub 5 .level) 5.0) 100 }}" height="100%" />
+                </svg>
+            </td>
         </tr>
         {{ end }}
     </table>
