@@ -1,5 +1,5 @@
 ---
-title: Eduction
+title: Education
 id: education
 ---
 ## Master of Science in Computer Science and Engineering

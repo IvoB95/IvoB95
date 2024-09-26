@@ -1,9 +1,43 @@
-/* color scheme: https://colorhunt.co/palette/02152603346e6eacdae2e2b6 */
+/* color scheme: https://coolors.co/fffcf2-ccc5b9-403d39-252422-eb5e28 
 :root {
-    --fg-color: #021526;
-    --bg-color: #E2E2B6;
-    --bg-color2: #6EACDA;
-    --accent-color: #03346E;
+    --fg-color: #252422;
+    --bg-color: #FFFCF2;
+    --bg-color2: #CCC5B9;
+    --accent-color: #eb5e28;
+}
+*/
+
+/* color scheme: https://coolors.co/0d1b2a-1b263b-415a77-778da9-e0e1dd 
+:root {
+    --fg-color: #0D1B2A;
+    --bg-color: #E0E1DD;
+    --bg-color2: #DBCDC6;
+    --accent-color1: #415A77;
+    --accent-color2: #1B263B;
+    --button-hover: var(--accent-color1);
+    --button-hover-text: var(--bg-color);
+    --active-button: var(--accent-color2);
+    --active-button-text: var(--bg-color);
+    --navbar: var(--accent-color1);
+    --navbar-button1: var(--bg-color2);
+    --navbar-button2: var(--fg-color);
+}
+*/
+
+/* color scheme: https://coolors.co/0d1b2a-1b263b-415a77-778da9-e0e1dd */
+:root {
+    --fg-color: #b0cbf7;
+    --bg-color: #26282B;
+    --bg-color2: #353941;
+    --accent-color1: #8da8e6;
+    --accent-color2: #5F85DB;
+    --button-hover: var(--accent-color1);
+    --button-hover-text: var(--bg-color);
+    --active-button: var(--accent-color2);
+    --active-button-text: var(--bg-color);
+    --navbar: var(--accent-color2);
+    --navbar-button1: var(--bg-color2);
+    --navbar-button2: var(--accent-color2);
 }
 
 html {
@@ -36,9 +70,14 @@ nav li a {
     border-radius: 5px;
 }
 
+nav li a:hover {
+    color: var(--button-hover-text);
+    background-color: var(--button-hover);
+}
+
 nav li a.active {
-    background-color: var(--accent-color) !important;
-    color: var(--bg-color);
+    background-color: var(--active-button) !important;
+    color: var(--active-button-text) !important;
 }
 
 .content-outer {
@@ -54,7 +93,7 @@ nav li a.active {
     border-radius: 5px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 801px) {
     body {
         display: flex;
         justify-content: center;
@@ -69,11 +108,12 @@ nav li a.active {
     }
 
     nav li a {
-        display: block;
+        display: flex;
         margin-top: 0.4em;
-        padding: 0.5em;
-        width: 7em;
-        text-align: center;
+        width: 8em;
+        height: 2em;
+        justify-content: center;
+        align-items: center;
         text-decoration: none;
     }
 
@@ -102,7 +142,7 @@ nav li a.active {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     html {
         scroll-padding-top: 2.5em;
     }
@@ -120,7 +160,7 @@ nav li a.active {
         padding-bottom: 5px;
         padding-right: 0.7em;
         z-index: 2;
-        background-color: var(--accent-color);
+        background-color: var(--navbar);
     }
 
     #contents {
@@ -147,11 +187,12 @@ nav li a.active {
 
 
     nav li a {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-top: 0.5em;
-        padding: 0.5em;
         width: 95vw;
-        text-align: center;
+        height: 2em;
         text-decoration: none;
     }
 
@@ -161,11 +202,11 @@ nav li a.active {
         border-width: 0;
         font-size: inherit;
         height: 2.4em;
-        background-color: var(--fg-color);
+        background-color: var(--navbar-button1);
     }
 
     #openCloseButton rect {
-        fill: var(--accent-color);
+        fill: var(--navbar-button2);
     }
 
     .content-outer section {
