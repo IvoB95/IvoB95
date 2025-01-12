@@ -24,7 +24,7 @@
 }
 */
 
-/* color scheme: https://coolors.co/0d1b2a-1b263b-415a77-778da9-e0e1dd */
+/* color scheme: https://coolors.co/0d1b2a-1b263b-415a77-778da9-e0e1dd 
 :root {
     --fg-color: #b0cbf7;
     --bg-color: #26282B;
@@ -40,6 +40,36 @@
     --navbar-button2: var(--accent-color2);
     --prog-bar-fill: var(--accent-color2);
     --prog-bar-empty: var(--bg-color);
+}*/
+
+:root {
+    --button-hover: var(--accent-color1);
+    --button-hover-text: var(--bg-color);
+    --active-button: var(--accent-color2);
+    --active-button-text: var(--bg-color);
+    --navbar: var(--accent-color2);
+    --navbar-button1: var(--bg-color2);
+    --navbar-button2: var(--accent-color2);
+    --prog-bar-fill: var(--accent-color2);
+    --prog-bar-empty: var(--bg-color);
+}
+
+
+/*
+:root {
+    --fg-color: black;
+    --bg-color: white;
+    --bg-color2: white;
+    --accent-color1: #4d4d4d;
+    --accent-color2: black;
+}*/
+
+:root {
+    --fg-color: #2A324B;
+    --bg-color: #F5F5F5;
+    --bg-color2: #F5F5F5;
+    --accent-color1: #424f76;
+    --accent-color2: #2A324B;
 }
 
 html {
@@ -50,7 +80,7 @@ body {
     margin: 0;
     background-color: var(--bg-color);
     color: var(--fg-color);
-    font-family: Helvetica, Arial;
+    font-family: Courier New;
 }
 
 
@@ -121,7 +151,8 @@ nav li a.active {
     nav li a {
         display: flex;
         margin-top: 0.4em;
-        width: 8em;
+        padding-top: 0.2em;
+        width: 10em;
         height: 2em;
         justify-content: center;
         align-items: center;
